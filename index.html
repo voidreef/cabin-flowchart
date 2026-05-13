@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CABIN + Ex Deorum Flowchart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Minecraft Modpack Notes</p>
+      <h1>CABIN + Ex Deorum Flowchart</h1>
+      <p class="subtitle">Create Above and Beyond in Newer + Ex Deorum resource paths.</p>
+    </div>
+    <div class="controls">
+      <button id="fitButton" type="button">Fit view</button>
+      <button id="resetButton" type="button">Reset zoom</button>
+    </div>
+  </header>
+
+  <main>
+    <aside class="legend" aria-label="Legend">
+      <h2>Legend</h2>
+      <div><span class="swatch input"></span> Input</div>
+      <div><span class="swatch process"></span> Process / Tool</div>
+      <div><span class="swatch output"></span> Output</div>
+      <div><span class="swatch random"></span> Random output group</div>
+      <p class="hint">Drag the canvas to pan. Use the mouse wheel to zoom.</p>
+    </aside>
+
+    <section class="chart-shell" aria-label="Flowchart canvas">
+      <svg id="chart" role="img" aria-labelledby="chartTitle chartDesc">
+        <title id="chartTitle">CABIN + Ex Deorum flowchart</title>
+        <desc id="chartDesc">Flowchart showing gravel, sand, dirt, and organic material processing routes.</desc>
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" />
+          </marker>
+        </defs>
+        <g id="viewport">
+          <g id="edges"></g>
+          <g id="nodes"></g>
+        </g>
+      </svg>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
