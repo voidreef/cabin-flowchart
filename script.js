@@ -46,7 +46,7 @@ const recipes = {
     { id: "andesiteAlloy", type: "output", x: 2680, y: 805, title: "Andesite Alloy" },
 
     { id: "sand", type: "input", x: 70, y: 1030, title: "Sand" },
-    { id: "sandSieve", type: "process", x: 360, y: 1030, title: "Sieve", subtitle: "Sand" },
+    { id: "sandSieve", type: "process", x: 360, y: 1030, title: "Flint Sieve", subtitle: "Sand" },
     {
       id: "sandDrops",
       type: "random",
