@@ -31,6 +31,16 @@ const recipes = {
       ]
     },
 
+    { id: "oreChunks", type: "input", x: 1070, y: 355, title: "Ore Chunks", subtitle: "4 matching chunks" },
+    { id: "craftOreBlock", type: "process", x: 1360, y: 355, title: "Crafting", subtitle: "4 chunks → 1 block" },
+    { id: "oreBlock", type: "output", x: 1650, y: 355, title: "Ore Block" },
+    { id: "mineOreBlock", type: "process", x: 1940, y: 355, title: "Mining" },
+    { id: "crushedOre", type: "output", x: 2230, y: 355, title: "Crushed Ore", subtitle: "2–3 per ore block" },
+    { id: "smeltCrushedOre", type: "process", x: 2520, y: 355, title: "Smelting", subtitle: "3 nuggets each" },
+    { id: "oreNuggets", type: "output", x: 2810, y: 355, title: "Ore Nuggets", subtitle: "9 nuggets" },
+    { id: "craftIngot", type: "process", x: 3100, y: 355, title: "Crafting" },
+    { id: "metalIngot", type: "output", x: 3390, y: 355, title: "Metal Ingot" },
+
     { id: "dust", type: "input", x: 70, y: 610, title: "Dust" },
     { id: "water", type: "input", x: 70, y: 740, title: "Water" },
     { id: "clayBarrel", type: "process", x: 360, y: 675, title: "Barrel", subtitle: "Water + dust" },
@@ -82,6 +92,15 @@ const recipes = {
     { from: "hammer", to: "gravel" },
     { from: "gravel", to: "gravelSieve" },
     { from: "gravelSieve", to: "gravelDrops", label: "random" },
+    { from: "gravelDrops", to: "oreChunks", label: "ore chunks" },
+    { from: "oreChunks", to: "craftOreBlock" },
+    { from: "craftOreBlock", to: "oreBlock" },
+    { from: "oreBlock", to: "mineOreBlock" },
+    { from: "mineOreBlock", to: "crushedOre", label: "2–3" },
+    { from: "crushedOre", to: "smeltCrushedOre" },
+    { from: "smeltCrushedOre", to: "oreNuggets", label: "3 each" },
+    { from: "oreNuggets", to: "craftIngot" },
+    { from: "craftIngot", to: "metalIngot" },
 
     { from: "dust", to: "clayBarrel" },
     { from: "water", to: "clayBarrel" },
